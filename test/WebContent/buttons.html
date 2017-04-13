@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Buttons</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dcc.js"></script>
+    <link rel="stylesheet" href="css/dcc.css">
+</head>
+
+<body>
+    <div id="global-cookie-message">
+        <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+    </div>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="alerts.html">Alerts</a></li>
+                            <li><a href="forms.html">Forms</a></li>
+                            <li><a href="dates.html">Dates</a></li>
+                            <li><a href="tables.html">Tables &amp; Data</a></li>
+                            <li><a href="errors.html">Errors &amp; Validation</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                            <li><a href="tags-label.html">Tags - labels</a></li>
+                            <li><a href="tags-list.html">Tags - list</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="signin.html">Sign in / register page</a></li>
+                            <li><a href="color-example.html">Use of colour</a></li>
+                            <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Log out</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="phase-banner">
+            <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
+        </div>
+    </header>
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Buttons</li>
+
+        </ol>
+        <h1>Buttons</h1>
+        <div class="col-lg-7">
+
+
+
+            <p><code>.btn-default</code></p>
+            <p>
+                <button class="btn btn-default">Button</button>
+            </p>
+            <p><code>.btn-lg .btn-default</code></p>
+            <p>
+                <button class="btn btn-default btn-lg">Button large</button>
+            </p>
+
+            <p><code>.btn-green</code></p>
+            <p>
+                <button class="btn btn-green">Button</button>
+            </p>
+            <p>Start button with GOVUK_ELEMENTS background image.</p>
+            <p>
+                <p><code>.btn-lg .btn-default .btn-start</code></p>
+                <p>
+                    <button class="btn btn-lg btn-start" href="#" role="button">Start now </button>
+                </p>
+                <p>Start button with Bootstrap glyphicon.</p>
+            </p>
+            <button class="btn btn-default btn-lg" href="#" role="button">Start now <span class="glyphicon glyphicon-chevron-right pull-right"></span></button>
+            </p>
+            <h2>Standard Bootstrap buttons</h2>
+
+            <p>
+                <button class="btn btn-success">Button success</button>
+            </p>
+            <p>
+                <button class="btn btn-info">Button info</button>
+            </p>
+            <p>
+                <button class="btn btn-primary">Button primary</button>
+            </p>
+            <p>
+                <button class="btn btn-danger">Button danger</button>
+            </p>
+            <p>
+                <button class="btn btn-default" disabled>Button disabled</button>
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+
+        <p>Dorset County Council</p>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>

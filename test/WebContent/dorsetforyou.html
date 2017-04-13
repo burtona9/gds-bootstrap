@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/dcc.css">
+</head>
+
+<body>
+    <div id="global-cookie-message">
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+    </div>
+    <header>
+        <nav class="navbar dfy">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/logo.jpg"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="alerts.html">Alerts</a></li>
+                            <li><a href="forms.html">Forms</a></li>
+                            <li><a href="dates.html">Dates</a></li>
+                            <li><a href="tables.html">Tables &amp; Data</a></li>
+                            <li><a href="errors.html">Errors &amp; Validation</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                            <li><a href="tags-label.html">Tags - labels</a></li>
+                            <li><a href="tags-list.html">Tags - list</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="signin.html">Sign in / register page</a></li>
+                            <li><a href="color-example.html">Use of colour</a></li>
+                            <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Dorset For You brand</li>
+        </ol>
+        <h1>Dorset For You branding</h1>
+        <p>A header for DFY web content.</p>
+    </div>
+
+    <script>
+        $(function () {
+            $(".close").click(function () {
+                $("#global-cookie-message").css("display", "none");
+            });
+        })
+    </script>
+</body>
+
+</html>
