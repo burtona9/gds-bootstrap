@@ -1,0 +1,639 @@
+// GOVUK_FRONTEND_TOOLKIT colours,mixins
+@import 'colours/palette';
+@import 'design-patterns/buttons';
+@import 'css3';
+@import 'fonts';
+@import 'font_stack';
+$font-size-base: 19px;
+// Colours from govuk palette matched to bootstap variables
+$text-color:$black;
+$text-muted: #6b6565; // bootstrap's default fails accessibility contrast
+$link-color: $link-colour;
+$link-hover-color: $link-hover-colour;
+$state-danger-border: $red;
+$state-danger-text:$red;
+$state-danger-bg:$white;
+$state-success-bg: $white;
+$state-success-border:$green;
+$state-success-text:$green;
+$state-info-bg: $white;
+$state-info-text:$black;
+$state-info-border: $border-colour;
+$state-warning-text: #c94800;
+$state-warning-border: #c94800;
+$state-warning-bg: $white;
+$input-border: $black;
+$input-border-focus:$yellow;
+$navbar-inverse-link-color:$white;
+$breadcrumb-bg: $white;
+$navbar-inverse-bg: $black;
+$navbar-inverse-brand-hover-color: yellow;
+$navbar-inverse-link-hover-color:lightgrey; //$grey-4;
+$breadcrumb-separator: ">";
+// Square borders
+$border-radius-base: 0;
+$border-radius-large:0;
+$border-radius-small:0;
+// Fonts from GDS to Bootstrap
+$font-family-base: $nta-light;
+// BOOTSTRAP SASS
+@import 'bootstrap';
+// alteration to bootstrap
+a {
+    .nav &,
+    &.btn {
+        text-decoration: none;
+    }
+    &:focus {
+        background-color: $focus-colour;
+        outline: 3px solid $focus-colour;
+    }
+    text-decoration: underline;
+    // bootstrap sets this to none. 
+    // set back to default behaviour 'underline'
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    &:focus {
+        outline: 3px solid $focus-colour;
+        color: white;
+    }
+}
+
+header {
+    margin-bottom: 15px;
+    #applicationTitle {
+        color: white;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 6px;
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+        }
+    }
+    .navbar {
+        img {
+            float: left;
+            margin-right: 15px;
+        }
+        margin-bottom: 0;
+        color: white;
+        // dorset for you bigger navbar to fix larger image.
+        &.dfy {
+            height: 85px;
+            border-bottom: lightblue solid 2px;
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+    .phase-banner {
+        @extend .container;
+        min-height: 0;
+        padding: 10px 0 8px 15px;
+        @include media(tablet) {
+            padding-bottom: 10px;
+        }
+        border-bottom: 1px solid $border-colour;
+        p {
+            display: table;
+            margin: 0;
+            color: $banner-text-colour;
+            font-size: 16px;
+        }
+        span {
+            display: table-cell;
+            vertical-align: baseline;
+        }
+        .phase {
+            display: inline-block;
+            margin: 0 8px 0 0;
+            padding: 2px 5px 0;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: white;
+            background-color: $govuk-blue;
+        }
+    }
+}
+
+.navbar-brand {
+    padding: 7.5px 5px;
+}
+
+#global-cookie-message {
+    display: none;
+    width: 100%;
+    background-color: #d5e8f3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    p {
+        max-width: 960px;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 16px;
+    }
+    #closeCookieButton {
+        position: relative;
+        padding-bottom: 10px;
+        margin-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.breadcrumb {
+    li {
+        font-size: 16px;
+        color: $text-colour;
+    }
+    a {
+        color: $text-colour;
+    }
+}
+
+
+/** Basic footer. Can be better  **/
+
+.footer {
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #dee0e2;
+    text-align: center;
+}
+
+
+/************  ALERTS  ************************************************************/
+
+.alert {
+    // Set just border left
+    border-top: 0 none transparent;
+    border-right: 0 none transparent;
+    border-bottom: 0 none transparent;
+    border-left-width: 5px;
+    border-left-style: solid;
+    // Set colours for different alerts
+    .alert-danger {
+        @include alert-variant(transparent, $state-danger-border, $state-danger-text);
+    }
+    .alert-info {
+        @include alert-variant(transparent, $state-info-border, $black);
+    }
+    .alert-success {
+        @include alert-variant(transparent, $state-success-border, $state-success-text);
+    }
+    .alert-warning {
+        @include alert-variant(transparent, $state-warning-border, $state-warning-text);
+    }
+    .plain-text {
+        color: black;
+    }
+}
+
+
+/************************************************************************
+ BUTTONS **/
+
+.btn {
+    &:focus {
+        outline: 3px solid $focus-colour;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    &.btn-green {
+        background-color: $green;
+        color: white;
+        @include box-shadow(0 2px 0 darken($green, 15%));
+        &:hover,
+        &:focus {
+            background-color: darken($green, 5%);
+        }
+        &:focus {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+
+/* gds start button with side arrow */
+
+.btn-start {
+    background-color: $green;
+    color: white;
+    background-image: url("../img/icon-pointer.png");
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    padding-right: 40px;
+    @include box-shadow(0 2px 0 darken($green, 15%));
+    &:hover,
+    &:focus {
+        background-color: darken($green, 5%);
+        color: white;
+    }
+    &:focus {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+
+/************************************************************************
+ FORMS **/
+
+legend {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border: 1px solid black;
+    &:focus {
+        outline-color: $focus-colour;
+        outline-width: 3px;
+        outline-style: solid;
+    }
+}
+
+.input-group-addon {
+    border: 1px solid;
+}
+
+label {
+    font-weight: 400;
+    margin-bottom: 0;
+    padding-bottom: 2px;
+    .help-block {
+        color: $secondary-text-colour;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    @include box-shadow(0 0 0 5px $focus-colour);
+}
+
+input[type="file"] {
+    max-width: 100%;
+}
+
+.input-group-btn {
+    .btn-primary {
+        border: 1px solid $brand-primary;
+    }
+}
+
+.form-control[disabled].dcc-disabled,
+.form-control[readonly].dcc-disabled,
+fieldset[disabled] .form-control.dcc-disabled {
+    border: none;
+    background-color: white;
+    box-shadow: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+
+/***************************************************
+ Radio buttons and Checkboxes  *******************/
+
+.radio .collapse label {
+    padding-left: 0;
+}
+
+.radio label,
+.checkbox label {
+    padding-left: 50px;
+    min-height: 40px;
+}
+
+.radio + .radio {
+    margin-top: 5px;
+}
+
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-top: 10px;
+    .form-horizontal & {
+        margin-top: 0;
+    }
+}
+
+.block-label {
+    line-height: 1;
+    display: block;
+    float: none;
+    clear: left;
+    position: relative;
+    padding-left: 50px;
+    padding-top: 14px;
+    input {
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        top: 0;
+        width: 38px;
+        height: 38px;
+    }
+    input[type=radio],
+    input[type=checkbox] {
+        margin-left: 0;
+    }
+    .radio,
+    .checkbox {
+        margin-top: 0;
+        .form-group {
+            label {
+                //  padding-left: 0;
+            }
+        }
+    }
+    // above ie8 hide native radio buttons & checkboxes. Use psuedu elements.
+    .js-enabled & {
+        input {
+            @include opacity(0);
+        }
+        &.selection-button-radio {
+            margin-left: 0;
+            padding-top: 8px;
+            &:before {
+                content: "";
+                border: 2px solid black;
+                background: transparent;
+                width: 34px;
+                height: 34px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include border-top-radius(50%);
+                @include border-bottom-radius(50%);
+                @include border-left-radius(50%);
+                @include border-right-radius(50%);
+                @include opacity(1);
+            }
+            &:after {
+                content: "";
+                border: 10px solid;
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 7px;
+                left: 7px;
+                @include border-top-radius(50%);
+                @include border-bottom-radius(50%);
+                @include border-left-radius(50%);
+                @include border-right-radius(50%);
+                transition: all .2s;
+                @include opacity(0);
+            }
+        }
+        &.selection-button-checkbox {
+            &:before {
+                content: "";
+                border: 2px solid;
+                background: transparent;
+                width: 34px;
+                height: 34px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include opacity(1);
+            }
+            &:after {
+                content: "";
+                border: solid;
+                border-width: 0 0 5px 5px;
+                background: transparent;
+                width: 20px;
+                height: 10px;
+                position: absolute;
+                top: 10px;
+                left: 8px;
+                -moz-transform: rotate(-45deg); // Firefox 15 compatibility
+                -o-transform: rotate(-45deg); // Opera 12.0 compatibility
+                -webkit-transform: rotate(-45deg); // Safari 8 compatibility
+                -ms-transform: rotate(-45deg); // IE9 compatibility
+                transform: rotate(-45deg);
+                @include opacity(0);
+            }
+        }
+        // Focused state
+        &.selection-button-radio,
+        &.selection-button-checkbox {
+            &.focused::before {
+                @include box-shadow(0 0 0 5px $focus-colour);
+            }
+        }
+        // Focused state
+        &.selection-button-radio,
+        &.selection-button-checkbox {
+            &.selected::after {
+                @include opacity(1);
+            }
+        }
+    }
+}
+
+.radio,
+.checkbox {
+    margin-left: 0;
+}
+
+.help-block {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Memorable date input e.g. Date of Birth.  3 seperated fields  **/
+
+.date-input {
+    height: 100px;
+    width: 100%;
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+    label {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .date-input-element {
+        width: 60px;
+        float: left;
+        margin-right: 5px;
+        &.year {
+            width: 95px;
+        }
+        input {
+            width: 100%;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+/**************************************************************************
+** Validation errors  **/
+
+.error {
+    margin-right: 15px;
+    .form-control {
+        border: 4px solid $error-colour;
+    }
+    border-left: 4px solid $error-colour;
+    padding-left: 10px;
+    clear:both;
+}
+
+.error-message {
+    color: $error-colour;
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 2px 0;
+    font-weight: 700;
+}
+
+// Summary of multiple error messages
+.error-summary {
+    border-width: 4px;
+    &:focus {
+        outline: 3px solid $focus-colour;
+    }
+    .error-summary-heading {
+        margin-top: 0;
+        font-size: 24px;
+        margin-top: em(25, 20);
+        margin-bottom: em(10, 20);
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    .error-summary-list {
+        padding-left: 0;
+        a {
+            color: $error-colour;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+.heading-xlarge {
+    font-size: 64px;
+    margin-top: em(25, 24);
+    margin-bottom: em(10, 24);
+}
+
+.heading-large {
+    font-size: 36px;
+    margin-top: em(25, 24);
+    margin-bottom: em(10, 24);
+}
+
+.heading-medium {
+    font-size: 24px;
+    margin-top: em(25, 20);
+    margin-bottom: em(10, 20);
+}
+
+.heading-small {
+    font-size: 19px;
+    margin-top: em(10, 16);
+    margin-bottom: em(5, 16);
+}
+
+// Replicate GDS example use of large colour notification, using variation of bootstrap jumbotron component.
+.jumbotron-turquoise {
+    background-color: $turquoise;
+    color: white;
+}
+
+
+/** DATA  **/
+
+.data {
+    font-weight: 800;
+    margin-top: em(5, 16);
+    margin-bottom: em(20, 16);
+    @include media(tablet) {
+        margin-top: em(5, 19);
+        margin-bottom: em(20, 19);
+    }
+}
+
+.data-item {
+    display: block;
+    line-height: 1;
+}
+
+
+/* @import 'dates'; */
+
+.recentTagItem {
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: normal;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &:focus {
+        outline: 3px solid $focus-colour;
+        text-decoration: none;
+    }
+}
+
+#tagList {
+    .label {
+        display: inline-block;
+        margin-right: 5px;
+        cursor: pointer;
+        font-weight: normal;
+    }
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 18px solid darkgreen;
+    border-bottom: 8px solid darkgreen;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@import 'table-checkbox';

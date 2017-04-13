@@ -1,0 +1,53 @@
+.js-enabled {
+    table {
+        tr.row-selected {
+            background-color: #dff0d8;
+        }
+        td {
+            select {
+                min-width: 120px;
+            }
+        }
+        th.cb,
+        td.cb {
+            width: 75px;
+            padding: 2px 12px 0 12px;
+            &:before {
+                content: '';
+                margin-left: 0;
+            }
+            .checkbox {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .block-label.selection-button-checkbox {
+                padding-top: 2px;
+                padding-bottom: 0;
+                &:before {
+                    height: 36px;
+                    width: 100%;
+                    content: "SELECT";
+                    padding: 6px;
+                    text-align: center;
+                    border: solid 1px grey;
+                }
+                &:after {
+                    background-color: white;
+                    height: 36px;
+                    width: 100%;
+                    content: "SELECTED";
+                    padding: 6px;
+                    text-align: center;
+                    border: 1px solid grey;
+                    top: 0;
+                    left: 0;
+                    -moz-transform: rotate(0deg); // Firefox 15 compatibility
+                    -o-transform: rotate(0deg); // Opera 12.0 compatibility
+                    -webkit-transform: rotate(0deg); // Safari 8 compatibility
+                    -ms-transform: rotate(0deg); // IE9 compatibility
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}
