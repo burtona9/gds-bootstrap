@@ -9,8 +9,13 @@
 
        /* Checkbox, set classes to apply styles */
        $("input[type=checkbox]").change(function () {
-           $(this).closest(".selection-button-checkbox").toggleClass('selected');
-
+           if ($(this).is(":checked")) {
+               $(this).closest(".selection-button-checkbox").addClass('selected');
+               $(this).attr("checked", true);
+           } else {
+               $(this).closest(".selection-button-checkbox").removeClass('selected');
+               $(this).attr("checked", false);
+           }
        });
 
 

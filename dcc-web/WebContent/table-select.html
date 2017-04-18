@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tables</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/dcc.js"></script>
+    <link rel="stylesheet" href="css/dcc.css">
+</head>
+
+<body>
+    <div id="global-cookie-message">
+        <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+    </div>
+    <header>
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px">
+                    <span id="applicationTitle">Application title</span></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="buttons.html">Buttons</a></li>
+                            <li><a href="alerts.html">Alerts</a></li>
+                            <li><a href="forms.html">Forms</a></li>
+                            <li><a href="dates.html">Dates</a></li>
+                            <li><a href="tables.html">Tables &amp; Data</a></li>
+                            <li><a href="errors.html">Errors &amp; Validation</a></li>
+                            <li><a href="icons.html">Icons</a></li>
+                            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                            <li><a href="cookies.html">Cookie message</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Experimental <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="table-select.html">Table selection</a></li>
+                            <li><a href="tags-label.html">Tags - labels</a></li>
+                            <li><a href="tags-list.html">Tags - list</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="signin.html">Sign in / register page</a></li>
+                            <li><a href="feedback.html">Feedback on service</a></li>
+                            <li><a href="color-example.html">Use of colour</a></li>
+                            <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="phase-banner">
+            <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
+        </div>
+    </header>
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Table selection</li>
+        </ol>
+        <h1>Table selection</h1>
+        <div class="row">
+
+            <form id="myForm" action="dostuff" method="post">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee</th>
+                            <th scope="col">Claim</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Cost Centre</th>
+                            <th scope="col" class="cb">
+                                <a class="btn btn-primary" id="toggleAll">TOGGLE ALL</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Jill Evans</td>
+                        <td>Overtime 4 hours</td>
+                        <td class="text-success">Finance Approved</td>
+                        <td>
+                            <select name="sel1">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck4" value="ck4">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td class="text-success">Finance Approved</td>
+                        <td>
+                            <select name="sel2">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck3" value="ck3">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Trump</td>
+                        <td></td>
+                        <td>
+                            <select name="sel3">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck2" value="ck2">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenny</td>
+                        <td>Poole</td>
+                        <td></td>
+                        <td>
+                            <select name="sel3">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck1" value="ck1">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="btn btn-green">submit</button>
+            </form>
+        </div>
+        <script>
+            $(document).ready(function () {
+                //$("#myTable").tablesorter();
+                $("#myForm").on("submit", function (e) {
+                    e.preventDefault();
+                    console.log("formSubmit");
+                    $.ajax({
+                        url: $(this).attr("action"),
+                        cache: false,
+                        type: $(this).attr("method"),
+                        dataType: "json",
+                        crossDomain: true,
+                        data: $(this).serialize(),
+                        processData: false
+                    }).done(function (data, textStatus, jqXHR) {
+
+                    }).fail(function (jqXHR, textStatus, errorThrown) {
+
+                    });
+                    return false;
+                });
+
+                /* Checkbox, set classes to apply styles */
+                $("input[type=checkbox]").change(function () {
+                    if ($(this).is(":checked"))
+                        $(this).closest("tr").addClass("row-selected");
+                    else
+                        $(this).closest("tr").removeClass("row-selected");
+                });
+
+                $("#toggleAll").click(function () {
+                    if ($(this).hasClass("all-selected")) {
+                        $(this).removeClass("all-selected");
+                        $("input[type=checkbox]").each(function () {
+                            $(this).closest(".selection-button-checkbox").removeClass('selected');
+                            $(this).closest("tr").removeClass("row-selected");
+                            $(this).attr("checked", false);
+
+                        })
+                    } else {
+                        $(this).addClass("all-selected");
+                        $("input[type=checkbox]").each(function () {
+                            $(this).closest(".selection-button-checkbox").addClass('selected');
+                            $(this).closest("tr").addClass("row-selected");
+                            $(this).attr("checked", true);
+
+                        })
+                    }
+                })
+
+            });
+        </script>
+</body>
+
+</html>
