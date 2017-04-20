@@ -176,58 +176,163 @@
                 <button type="submit" class="btn btn-green">submit</button>
             </form>
         </div>
-        <script>
-            $(document).ready(function () {
-                //$("#myTable").tablesorter();
-                $("#myForm").on("submit", function (e) {
-                    e.preventDefault();
-                    console.log("formSubmit");
-                    $.ajax({
-                        url: $(this).attr("action"),
-                        cache: false,
-                        type: $(this).attr("method"),
-                        dataType: "json",
-                        crossDomain: true,
-                        data: $(this).serialize(),
-                        processData: false
-                    }).done(function (data, textStatus, jqXHR) {
 
-                    }).fail(function (jqXHR, textStatus, errorThrown) {
 
-                    });
-                    return false;
+        <div class="row">
+
+            <form action="dostuff" method="post">
+                <table class="table row-select">
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee</th>
+                            <th scope="col">Claim</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Cost Centre</th>
+                            <th scope="col" class="cb">
+                                <a class="btn btn-primary" id="toggleAll">TOGGLE ALL</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>Jill Evans</td>
+                        <td>Overtime 4 hours</td>
+                        <td class="text-success">Finance Approved</td>
+                        <td>
+                            <select name="sel1">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck4" value="ck4">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td class="text-success">Finance Approved</td>
+                        <td>
+                            <select name="sel2">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck3" value="ck3">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>John</td>
+                        <td>Trump</td>
+                        <td></td>
+                        <td>
+                            <select name="sel3">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck2" value="ck2">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenny</td>
+                        <td>Poole</td>
+                        <td></td>
+                        <td>
+                            <select name="sel3">
+                                <option value="one">one</option>
+                                <option value="two">two</option>
+                                <option value="three">three</option>
+                                <option value="four">four</option>
+                            </select>
+                        </td>
+                        <td class="cb">
+                            <div class="checkbox">
+                                <label class="block-label selection-button-checkbox">
+                                    <input type="checkbox" name="ck1" value="ck1">
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="btn btn-green">submit</button>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            //$("#myTable").tablesorter();
+            $("#myForm").on("submit", function (e) {
+                e.preventDefault();
+
+                var formData = $(this).serializeArray();
+                $.ajax({
+                    url: $(this).attr("action"),
+                    cache: false,
+                    type: $(this).attr("method"),
+                    dataType: "json",
+                    contentType: "json",
+                    crossDomain: true,
+                    data: $(this).serialize(),
+                    processData: false
+                }).done(function (data, textStatus, jqXHR) {
+
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+
                 });
-
-                /* Checkbox, set classes to apply styles */
-                $("input[type=checkbox]").change(function () {
-                    if ($(this).is(":checked"))
-                        $(this).closest("tr").addClass("row-selected");
-                    else
-                        $(this).closest("tr").removeClass("row-selected");
-                });
-
-                $("#toggleAll").click(function () {
-                    if ($(this).hasClass("all-selected")) {
-                        $(this).removeClass("all-selected");
-                        $("input[type=checkbox]").each(function () {
-                            $(this).closest(".selection-button-checkbox").removeClass('selected');
-                            $(this).closest("tr").removeClass("row-selected");
-                            $(this).attr("checked", false);
-
-                        })
-                    } else {
-                        $(this).addClass("all-selected");
-                        $("input[type=checkbox]").each(function () {
-                            $(this).closest(".selection-button-checkbox").addClass('selected');
-                            $(this).closest("tr").addClass("row-selected");
-                            $(this).attr("checked", true);
-
-                        })
-                    }
-                })
-
+                return false;
             });
-        </script>
+
+            /* Checkbox, set classes to apply styles */
+            $("input[type=checkbox]").change(function () {
+                if ($(this).is(":checked"))
+                    $(this).closest("tr").addClass("row-selected");
+                else
+                    $(this).closest("tr").removeClass("row-selected");
+            });
+
+            $("#toggleAll").click(function () {
+                if ($(this).hasClass("all-selected")) {
+                    $(this).removeClass("all-selected");
+                    $("input[type=checkbox]").each(function () {
+                        $(this).closest(".selection-button-checkbox").removeClass('selected');
+                        $(this).closest("tr").removeClass("row-selected");
+                        $(this).attr("checked", false);
+
+                    })
+                } else {
+                    $(this).addClass("all-selected");
+                    $("input[type=checkbox]").each(function () {
+                        $(this).closest(".selection-button-checkbox").addClass('selected');
+                        $(this).closest("tr").addClass("row-selected");
+                        $(this).attr("checked", true);
+
+                    })
+                }
+            })
+
+        });
+    </script>
 </body>
 
 </html>
