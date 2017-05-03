@@ -48,7 +48,7 @@ $(document).ready(function () {
         tagLabelsElement.html("");
 
         $.each(tagItems, function (key, value) {
-            tagLabelsElement.append("<span class=\"label label-primary tag-label\">" + value + "</span>");
+            tagLabelsElement.append("<span class=\"label label-primary tag-label\">" + value + "<button class=\"close\"></button></span>");
         });
     }
 });
