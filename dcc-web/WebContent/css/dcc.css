@@ -6329,6 +6329,31 @@ a svg {
   display: inline-block;
   vertical-align: middle; }
 
+html,
+body {
+  height: 100%; }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -142px; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+.site-footer,
+.page-wrap:after {
+  height: 220px; }
+
+.site-footer {
+  position: relative;
+  padding: 20px;
+  background: black;
+  color: white;
+  text-align: center;
+  overflow: hidden; }
+
 .js-enabled table tr.row-selected {
   background-color: #dff0d8; }
 
@@ -6375,5 +6400,26 @@ a svg {
       -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
       transform: rotate(0deg); }
+
+.row-select .table-checkbox {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.row-select thead tr:hover {
+  background-color: white;
+  cursor: default; }
+
+.row-select tr td:first-child {
+  width: 70px; }
+
+.row-select tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer; }
+
+.row-select tr.selected {
+  background-color: #dff0d8; }
+
+.row-select select {
+  width: 150px; }
 
 /*# sourceMappingURL=dcc.css.map */

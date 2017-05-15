@@ -635,24 +635,28 @@ a svg {
     display: inline-block;
     vertical-align: middle;
 }
-.page-wrap{
+
+.page-wrap {
     min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -142px; 
+    margin-bottom: -142px;
 }
+
 .page-wrap:after {
-  content: "";
-  display: block;
+    content: "";
+    display: block;
 }
-.site-footer, .page-wrap:after {
-  height: 220px; 
+
+.site-footer,
+.page-wrap:after {
+    height: 220px;
 }
+
 .site-footer {
-  position: relative;
-  padding:20px;
-  background: black;
-  color:white;
-  text-align:center;
-  overflow: hidden;
+    position: relative;
+    padding: 20px;
+    background: black;
+    color: white;
+    text-align: center;
 }
+
 @import 'table-checkbox';
