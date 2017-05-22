@@ -2,33 +2,25 @@
 <html>
 
 <head>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tags - label</title>
+    <meta name="description" content="Bootstrap implementation of GDS styles">
+    <meta name="keywords" content="Dorset,Council,ui,web,gds,bootstrap">
+    <meta name="author" content="Dorset County Council">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/dcc.js"></script>
     <link rel="stylesheet" href="css/dcc.css">
-    <script src="js/taglabels.js"></script>
-    <link rel="icon" type="image/png" href="fav/favicon.ico">
-    <style>
-        #tagSubmitBtn {
-            margin-top: 60px;
-            margin-bottom: 60px;
-        }
-        
-        #submittedMessage {
-            display: none;
-        }
-        
-        #done-svg {
-            vertical-align: middle;
-        }
-    </style>
-</head>
+    <link rel="icon" type="image/png" href="fav/favicon.ico"> </head>
 
 <body>
     <div class="page-wrap">
+        <div id="global-cookie-message">
+            <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+        </div>
         <header>
             <nav class="navbar navbar-inverse">
                 <div class="navbar-header">
@@ -69,37 +61,19 @@
             </div>
         </header>
         <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li>Tags</li>
-            </ol>
-            <h1>Tags - labels</h1>
-            <p>This has been implemented in the time,travel &amp; expense claims system.</p>
-            <div class="row">
-                <div class="col-lg-6 col-md-6">
-                    <div class="form-group">
-                        <label class="form-label" for="tag">Tag</label>
-                        <input type="text" class="form-control" id="tag"> </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-6"> Recently used tags
-                    <fieldset id="tagList"></fieldset>
-                </div>
-            </div>
-            <button type="button" class="btn btn-green" id="tagSubmitBtn">Submit</button>
-            <div class="alert alert-success" id="submittedMessage">
-                <p>
-                    <svg id="done-svg" fill="#006435" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /> </svg> You have submitted <span id="submittedTag"></span> </p>
-            </div>
+            <div id="mydiv" tabindex="0" style="width:50px; height:50px; border:blue solid 1px;"> </div>
         </div>
-    </div>
-    <footer class="site-footer"> <img src="img/lion.png" width="120px">
-        <p>Dorset County Council</p>
-        <p>Footer</p>
-    </footer>
+        <footer class="site-footer"> <img src="img/lion.png" width="120px">
+            <p>Dorset County Council</p>
+            <p>Footer</p>
+        </footer>
+        <script>
+            $(document).ready(function () {
+                $("#mydiv").keypress(function (e) {
+                    console.log(e.which);
+                })
+            })
+        </script>
 </body>
 
 </html>

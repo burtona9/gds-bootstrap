@@ -11,162 +11,118 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/dcc.js"></script>
     <link rel="stylesheet" href="css/dcc.css">
-    	<link rel="icon" type="image/png" href="fav/favicon.ico">
-</head>
+    <link rel="icon" type="image/png" href="fav/favicon.ico"> </head>
 
 <body>
-<div class="page-wrap">
-    <div id="global-cookie-message">
-        <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
-    </div>
-    <header>
-        <nav class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px">
-                    <span id="applicationTitle">Application title</span></a>
+    <div class="page-wrap">
+        <div id="global-cookie-message">
+            <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+        </div>
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px"> <span id="applicationTitle">Application title</span></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="alerts.html">Alerts</a></li>
+                                <li><a href="forms.html">Forms</a></li>
+                                <li><a href="dates.html">Dates</a></li>
+                                <li><a href="tables.html">Data &amp; tables</a></li>
+                                <li><a href="errors.html">Errors &amp; Validation</a></li>
+                                <li><a href="icons.html">Icons</a></li>
+                                <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                                <li><a href="cookies.html">Cookie message</a></li>
+                                <li><a href="tags.html">Tags - labels</a></li>
+                                <li><a href="tags2.html">Tags - list</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="signin.html">Sign in / register page</a></li>
+                                <li><a href="feedback.html">Feedback on service</a></li>
+                                <li><a href="color-example.html">Use of colour</a></li>
+                                <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="phase-banner">
+                <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
             </div>
-
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="alerts.html">Alerts</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                            <li><a href="dates.html">Dates</a></li>
-                            <li><a href="tables.html">Tables &amp; Data</a></li>
-                            <li><a href="errors.html">Errors &amp; Validation</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
-                            <li><a href="cookies.html">Cookie message</a></li>
-                            <li><a href="tags-label.html">Tags - labels</a></li>
-                            <li><a href="tags-list.html">Tags - list</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="signin.html">Sign in / register page</a></li>
-                            <li><a href="feedback.html">Feedback on service</a></li>
-                            <li><a href="color-example.html">Use of colour</a></li>
-                            <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
-                        </ul>
-                    </li>
+        </header>
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Sign in example</li>
+            </ol>
+            <h1>Example sign in / register screen</h1>
+            <div class="col-lg-5">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Sign in</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
                 </ul>
-
-            </div>
-
-        </nav>
-        <div class="phase-banner">
-            <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
-        </div>
-    </header>
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Sign in example</li>
-        </ol>
-        <h1>Example sign in / register screen</h1>
-        <div class="col-lg-5">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Sign in</a></li>
-                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
-
-            </ul>
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
-                    <h2>Sign in</h2>
-                    <form>
-                        <div class="form-group">
-                            <label class="form-label" for="emailSignIn">Email address
-                                <span class="help-block">The email you registered with</span>
-                            </label>
-                            <input type="email" class="form-control" id="emailSignIn">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="passwordSingIn">Password</label>
-                            <input type="password" class="form-control" id="passwordSingIn">
-                        </div>
-                        <button class="btn btn-green">Sign in</button>
-                        <br>
-                        <br>
-                        <a href="#">Having trouble signing in?</a>
-                    </form>
-
-
-
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <h2>Sign in</h2>
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label" for="emailSignIn">Email address <span class="help-block">The email you registered with</span> </label>
+                                <input type="email" class="form-control" id="emailSignIn"> </div>
+                            <div class="form-group">
+                                <label class="form-label" for="passwordSingIn">Password</label>
+                                <input type="password" class="form-control" id="passwordSingIn"> </div>
+                            <button class="btn btn-green">Sign in</button>
+                            <br>
+                            <br> <a href="#">Having trouble signing in?</a> </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile">
+                        <h2>Register</h2>
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label" for="firstname">First name</label>
+                                <input type="text" class="form-control" id="firstname"> </div>
+                            <div class="form-group">
+                                <label class="form-label" for="lastname">Last name</label>
+                                <input type="text" class="form-control" id="lastname"> </div>
+                            <div class="form-group">
+                                <label class="form-label" for="emailReg"> Email <span class="help-block">example: asdfg@poer.com</span> </label>
+                                <input type="email" class="form-control" id="emailReg"> </div>
+                            <div class="form-group">
+                                <label class="form-label" for="passwordReg">Create password <span class="help-block">Must be atleast 7 characters, include capitals and numbers</span> </label>
+                                <input type="password" class="form-control" id="passwordReg"> </div>
+                            <legend>I would like to recieve notifications </legend>
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label class="block-label selection-button-radio" for="often">
+                                        <input name="notif" id="often" type="radio" value=""> Often </label>
+                                </div>
+                                <div class="radio">
+                                    <label class="block-label selection-button-radio" for="occas">
+                                        <input name="notif" id="occas" type="radio" value=""> Occasionally </label>
+                                </div>
+                                <div class="radio">
+                                    <label class="block-label selection-button-radio" for="never">
+                                        <input name="notif" id="never" type="radio" value=""> Never </label>
+                                </div>
+                            </div>
+                            <p>
+                                <button class="btn btn-green">Complete registration</button>
+                            </p>
+                        </form>
+                    </div>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="profile">
-                    <h2>Register</h2>
-                    <form>
-                        <div class="form-group">
-                            <label class="form-label" for="firstname">First name</label>
-                            <input type="text" class="form-control" id="firstname">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="lastname">Last name</label>
-                            <input type="text" class="form-control" id="lastname">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="emailReg">
-                                Email
-                                <span class="help-block">example: asdfg@poer.com</span>
-                            </label>
-                            <input type="email" class="form-control" id="emailReg">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="passwordReg">Create password
-                                <span class="help-block">Must be atleast 7 characters, include capitals and numbers</span>
-                            </label>
-                            <input type="password" class="form-control" id="passwordReg">
-                        </div>
-                        <legend>I would like to recieve notifications
-                        </legend>
-                        <div class="form-group">
-                            <div class="radio">
-                                <label class="block-label selection-button-radio" for="often">
-                                    <input name="notif" id="often" type="radio" value=""> Often
-                                </label>
-                            </div>
-
-                            <div class="radio">
-                                <label class="block-label selection-button-radio" for="occas">
-                                    <input name="notif" id="occas" type="radio" value=""> Occasionally
-                                </label>
-
-                            </div>
-
-                            <div class="radio">
-                                <label class="block-label selection-button-radio" for="never">
-                                    <input name="notif" id="never" type="radio" value=""> Never
-                                </label>
-                            </div>
-                        </div>
-                        <p>
-                            <button class="btn btn-green">Complete registration</button>
-                        </p>
-                    </form>
-
-                </div>
-
             </div>
-
         </div>
-
     </div>
-        </div>
-   <footer class="site-footer">
-        <img src="img/lion.png" width="120px">
+    <footer class="site-footer"> <img src="img/lion.png" width="120px">
         <p>Dorset County Council</p>
         <p>Footer</p>
     </footer>

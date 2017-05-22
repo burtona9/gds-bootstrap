@@ -70,22 +70,22 @@
             <h1>Table selection</h1>
             <hr>
             <div class="row">
-                <form id="myFormRowSelect" action="dostuff" method="post">
-                    <table class="table row-select">
-                        <thead>
-                            <tr class="head">
-                                <th>
-                                    <div class="checkbox table-checkbox">
-                                        <label class="block-label selection-button-checkbox" tabindex="0">
-                                            <input type="checkbox" name="all" value="all" id="toggleAll"> ALL </label>
-                                    </div>
-                                </th>
-                                <th scope="col">Employee</th>
-                                <th scope="col">Claim</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Cost Centre</th>
-                            </tr>
-                        </thead>
+                <table class="table row-select">
+                    <thead>
+                        <tr class="head">
+                            <th>
+                                <div class="checkbox table-checkbox">
+                                    <label class="block-label selection-button-checkbox">
+                                        <input type="checkbox" name="all" value="all" id="toggleAll" tabindex="0"> ALL </label>
+                                </div>
+                            </th>
+                            <th scope="col">Employee</th>
+                            <th scope="col">Claim</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Cost Centre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>
                                 <div class="checkbox table-checkbox">
@@ -97,7 +97,7 @@
                             <td>Overtime 4 hours</td>
                             <td class="text-success">Finance Approved</td>
                             <td>
-                                <select name="sel1">
+                                <select name="sel1" class="form-control">
                                     <option value="one">one</option>
                                     <option value="two">two</option>
                                     <option value="three">three</option>
@@ -116,7 +116,7 @@
                             <td>Jackson</td>
                             <td class="text-success">Finance Approved</td>
                             <td>
-                                <select name="sel2">
+                                <select name="sel2" class="form-control">
                                     <option value="one">one</option>
                                     <option value="two">two</option>
                                     <option value="three">three</option>
@@ -135,7 +135,7 @@
                             <td>Trump</td>
                             <td></td>
                             <td>
-                                <select name="sel3">
+                                <select name="sel3" class="form-control">
                                     <option value="one">one</option>
                                     <option value="two">two</option>
                                     <option value="three">three</option>
@@ -154,7 +154,7 @@
                             <td>Poole</td>
                             <td></td>
                             <td>
-                                <select name="sel3">
+                                <select name="sel3" class="form-control">
                                     <option value="one">one</option>
                                     <option value="two">two</option>
                                     <option value="three">three</option>
@@ -162,9 +162,9 @@
                                 </select>
                             </td>
                         </tr>
-                    </table>
-                    <button type="submit" class="btn btn-green row-select-submit">Approve selected</button>
-                </form>
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-green row-select-submit">Approve selected</button>
             </div>
             <hr> </div>
     </div>
@@ -174,7 +174,19 @@
     </footer>
     <script>
         $(document).ready(function () {
-            /* Checkbox, set classes to apply styles */
+            $("thead input[type=checkbox]").focus(function () {
+                $(this).closest(".block-label").addClass("focused");
+            })
+            $("thead input[type=checkbox]").focusout(function () {
+                $(this).closest(".block-label").removeClass("focused");
+            })
+            $("input[type=checkbox]").focus(function () {
+                $(this).closest("tr").addClass("focused");
+            })
+            $("input[type=checkbox]").blur(function () {
+                    $(this).closest("tr").removeClass("focused");
+                })
+                /* Checkbox, set classes to apply styles */
             $("input[type=checkbox]").click(function () {
                 if ($(this).closest("tr").hasClass("head")) return;
                 if ($(this).is(":checked")) {
@@ -192,7 +204,7 @@
                     $("input[type=checkbox]").each(function () {
                         $(this).closest(".selection-button-checkbox").removeClass('selected');
                         $(this).closest("tr").removeClass("row-selected");
-                        //$(this).attr("checked", false);
+                        $(this).attr("checked", false);
                     })
                 }
                 else {
@@ -204,19 +216,40 @@
                     })
                 }
             })
-            $('.row-select tr').click(function (e) {
-                if ($(this).hasClass("head")) return;
-                if ($(this).hasClass("row-selected")) {
-                    $(this).removeClass("row-selected");
-                    $(this).find("input[type=checkbox]").first().attr("checked", false);
-                    $(this).find(".selection-button-checkbox").first().removeClass("selected");
+            $(".row-select tbody tr").click(function (e) {
+                selectRowChange($(this));
+            })
+            $("input[type=checkbox]").keyup(function (e) {
+                if (e.which == 13) boxPressed($(this));
+            })
+
+            function selectRowChange(row) {
+                if (row.find("select").is(":focus")) return;
+                if (row.hasClass("row-selected")) {
+                    row.removeClass("row-selected");
+                    row.find("input[type=checkbox]").first().attr("checked", false);
+                    row.find(".selection-button-checkbox").first().removeClass("selected");
                 }
                 else {
-                    $(this).addClass("row-selected");
-                    $(this).find("input[type=checkbox]").first().attr("checked", true);
-                    $(this).find(".selection-button-checkbox").first().addClass("selected");
+                    row.addClass("row-selected");
+                    row.find("input[type=checkbox]").first().attr("checked", true);
+                    row.find(".selection-button-checkbox").first().addClass("selected");
                 }
-            })
+            }
+
+            function boxPressed(cbox) {
+                if (cbox.closest("select").is(":focus")) return;
+                if (cbox.closest("tr").hasClass("row-selected")) {
+                    cbox.closest("tr").removeClass("row-selected");
+                    cbox.attr("checked", false);
+                    cbox.closest("label").removeClass("selected");
+                }
+                else {
+                    cbox.closest("tr").addClass("row-selected");
+                    cbox.attr("checked", true);
+                    cbox.closest("label").addClass("selected");
+                }
+            }
         });
     </script>
 </body>

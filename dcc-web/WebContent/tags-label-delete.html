@@ -10,7 +10,7 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/dcc.css">
     <script src="js/taglabels.js"></script>
-    	<link rel="icon" type="image/png" href="fav/favicon.ico">
+    <link rel="icon" type="image/png" href="fav/favicon.ico">
     <style>
         #tagSubmitBtn {
             margin-top: 60px;
@@ -28,89 +28,74 @@
 </head>
 
 <body>
-<div class="page-wrap">
-    <header>
-        <nav class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="img/lion.png" alt="" width="80px">
-                    <span id="applicationTitle">Application title</span></a>
+    <div class="page-wrap">
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px"> <span id="applicationTitle">Application title</span></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="alerts.html">Alerts</a></li>
+                                <li><a href="forms.html">Forms</a></li>
+                                <li><a href="dates.html">Dates</a></li>
+                                <li><a href="tables.html">Data &amp; tables</a></li>
+                                <li><a href="errors.html">Errors &amp; Validation</a></li>
+                                <li><a href="icons.html">Icons</a></li>
+                                <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                                <li><a href="cookies.html">Cookie message</a></li>
+                                <li><a href="tags.html">Tags - labels</a></li>
+                                <li><a href="tags2.html">Tags - list</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="signin.html">Sign in / register page</a></li>
+                                <li><a href="feedback.html">Feedback on service</a></li>
+                                <li><a href="color-example.html">Use of colour</a></li>
+                                <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="phase-banner">
+                <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
             </div>
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="alerts.html">Alerts</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                            <li><a href="dates.html">Dates</a></li>
-                            <li><a href="tables.html">Tables &amp; Data</a></li>
-                            <li><a href="errors.html">Errors &amp; Validation</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
-                            <li><a href="cookies.html">Cookie message</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="signin.html">Sign in / register page</a></li>
-                            <li><a href="feedback.html">Feedback on service</a></li>
-                            <li><a href="color-example.html">Use of colour</a></li>
-                            <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
-        <div class="phase-banner">
-            <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
-        </div>
-    </header>
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Tags</li>
-        </ol>
-        <h1>Tags - labels</h1>
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="form-group">
-                    <label class="form-label" for="tag">Tag</label>
-                    <input type="text" class="form-control" id="tag">
+        </header>
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Tags</li>
+            </ol>
+            <h1>Tags - labels</h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="tag">Tag</label>
+                        <input type="text" class="form-control" id="tag"> </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                Recently used tags
-                <p id="tagList">
-                </p>
+            <div class="row">
+                <div class="col-lg-6 col-md-6"> Recently used tags
+                    <p id="tagList"> </p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-green" id="tagSubmitBtn">Submit</button>
+            <div class="alert alert-success" id="submittedMessage">
+                <p>
+                    <svg id="done-svg" fill="#006435" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" /> </svg> You have submitted <span id="submittedTag"></span></p>
             </div>
         </div>
-        <button type="button" class="btn btn-green" id="tagSubmitBtn">Submit</button>
-
-        <div class="alert alert-success" id="submittedMessage">
-            <p>
-                <svg id="done-svg" fill="#006435" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-                You have submitted <span id="submittedTag"></span></p>
-        </div>
-               </div>
-               </div>
-   <footer class="site-footer">
-        <img src="img/lion.png" width="120px">
+    </div>
+    <footer class="site-footer"> <img src="img/lion.png" width="120px">
         <p>Dorset County Council</p>
         <p>Footer</p>
     </footer>

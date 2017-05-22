@@ -6304,9 +6304,14 @@ fieldset[disabled] .form-control.dcc-disabled {
 
 #tagList .label {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 10px;
   cursor: pointer;
   font-weight: normal; }
+  #tagList .label:hover {
+    background-color: #285f8f; }
+  #tagList .label:focus {
+    outline: 3px solid #ffbf47;
+    background-color: #285f8f; }
 
 .loader {
   border: 16px solid #f3f3f3;
@@ -6354,8 +6359,20 @@ body {
   text-align: center;
   overflow: hidden; }
 
+.js-enabled table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer; }
+
+.js-enabled table tr.focused {
+  outline: 3px solid #ffbf47; }
+
 .js-enabled table tr.row-selected {
   background-color: #dff0d8; }
+  .js-enabled table tr.row-selected:hover {
+    background-color: #d0e9c6; }
+
+.js-enabled table thead input[type=checkbox].focused:before {
+  border: 3px solid #ffbf47; }
 
 .js-enabled table td select {
   min-width: 120px; }
@@ -6400,26 +6417,5 @@ body {
       -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
       transform: rotate(0deg); }
-
-.row-select .table-checkbox {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.row-select thead tr:hover {
-  background-color: white;
-  cursor: default; }
-
-.row-select tr td:first-child {
-  width: 70px; }
-
-.row-select tr:hover {
-  background-color: #f1f1f1;
-  cursor: pointer; }
-
-.row-select tr.selected {
-  background-color: #dff0d8; }
-
-.row-select select {
-  width: 150px; }
 
 /*# sourceMappingURL=dcc.css.map */

@@ -10,106 +10,84 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/dcc.js"></script>
     <link rel="stylesheet" href="css/dcc.css">
-    	<link rel="icon" type="image/png" href="fav/favicon.ico">
-</head>
+    <link rel="icon" type="image/png" href="fav/favicon.ico"> </head>
 
 <body>
-<div class="page-wrap">
-    <div id="global-cookie-message">
-        <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+    <div class="page-wrap">
+        <div id="global-cookie-message">
+            <button id="closeCookieButton" type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <p>This service uses cookies to make the site simpler. <a href="#">Find out more about cookies</a></p>
+        </div>
+        <header>
+            <nav class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px"> <span id="applicationTitle">Application title</span></a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="typography.html">Typography</a></li>
+                                <li><a href="buttons.html">Buttons</a></li>
+                                <li><a href="alerts.html">Alerts</a></li>
+                                <li><a href="forms.html">Forms</a></li>
+                                <li><a href="dates.html">Dates</a></li>
+                                <li><a href="tables.html">Data &amp; tables</a></li>
+                                <li><a href="errors.html">Errors &amp; Validation</a></li>
+                                <li><a href="icons.html">Icons</a></li>
+                                <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                                <li><a href="cookies.html">Cookie message</a></li>
+                                <li><a href="tags.html">Tags - labels</a></li>
+                                <li><a href="tags2.html">Tags - list</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="signin.html">Sign in / register page</a></li>
+                                <li><a href="feedback.html">Feedback on service</a></li>
+                                <li><a href="color-example.html">Use of colour</a></li>
+                                <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="phase-banner">
+                <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
+            </div>
+        </header>
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Typography</li>
+            </ol>
+            <h1>Typography</h1>
+            <h2>Standard Headings</h2>
+            <p>Headings and links just use the basic html tags <code>&lt;a&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>.. etc.</p>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1>Heading XLarge</h1>
+                    <h2>Heading Large</h2>
+                    <h3>Heading medium</h3>
+                    <h4>Heading small</h4> </div>
+            </div>
+            <h2>Modified Headings</h2>
+            <p>Taken from <a href="http://govuk-elements.herokuapp.com/typography/">GDS Elements</a> classes added to headings allow for a different size display. Aids flexible layout development while maintaining page heading structure.</p>
+            <div class="panel panel-default">
+                <div class="panel-body"> <code>.heading-large</code>
+                    <h1 class="heading-large">Heading large</h1> </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body"> <code>.heading-medium</code>
+                    <h1 class="heading-medium">Heading medium</h1> </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body"> <code>.heading-small</code>
+                    <h1 class="heading-small">Heading small</h1> </div>
+            </div> <a href="#">A link example</a> </div>
     </div>
-    <header>
-        <nav class="navbar navbar-inverse">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img src="img/lion.png" width="80px">
-                    <span id="applicationTitle">Application title</span></a>
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Elements <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="alerts.html">Alerts</a></li>
-                            <li><a href="forms.html">Forms</a></li>
-                            <li><a href="dates.html">Dates</a></li>
-                            <li><a href="tables.html">Tables &amp; Data</a></li>
-                            <li><a href="errors.html">Errors &amp; Validation</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
-                            <li><a href="cookies.html">Cookie message</a></li>
-                            <li><a href="tags-label.html">Tags - labels</a></li>
-                            <li><a href="tags-list.html">Tags - list</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Example screens <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="signin.html">Sign in / register page</a></li>
-                            <li><a href="feedback.html">Feedback on service</a></li>
-                            <li><a href="color-example.html">Use of colour</a></li>
-                            <li><a href="dorsetforyou.html">Dorset For You branded</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-            </div>
-
-        </nav>
-        <div class="phase-banner">
-            <p><strong class="phase">BETA</strong> <span>This is a new service. Complete our 2 question survey to <a href="feedback.html">help us improve it.</a></span></p>
-        </div>
-    </header>
-    <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li>Typography</li>
-        </ol>
-        <h1>Typography</h1>
-        <h2>Standard Headings</h2>
-        <p>Headings and links just use the basic html tags <code>&lt;a&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>.. etc.</p>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h1>Heading XLarge</h1>
-                <h2>Heading Large</h2>
-                <h3>Heading medium</h3>
-                <h4>Heading small</h4>
-            </div>
-        </div>
-        <h2>Modified Headings</h2>
-        <p>Taken from <a href="http://govuk-elements.herokuapp.com/typography/">GDS Elements</a> classes added to headings allow for a different size display. Aids flexible layout development while maintaining page heading structure.</p>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <code>.heading-large</code>
-                <h1 class="heading-large">Heading large</h1>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <code>.heading-medium</code>
-                <h1 class="heading-medium">Heading medium</h1>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <code>.heading-small</code>
-                <h1 class="heading-small">Heading small</h1>
-            </div>
-        </div>
-        <a href="#">A link example</a>
-    </div>
-        </div>
-   <footer class="site-footer">
-        <img src="img/lion.png" width="120px">
+    <footer class="site-footer"> <img src="img/lion.png" width="120px">
         <p>Dorset County Council</p>
         <p>Footer</p>
     </footer>

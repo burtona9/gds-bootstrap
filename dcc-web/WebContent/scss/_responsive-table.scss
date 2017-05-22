@@ -1,0 +1,19 @@
+thead {
+    display: none;
+}
+
+tr,
+td {
+    display: block;
+    width: 100%;
+    .label-responsive {
+        width: 100%;
+    }
+    input,
+    select,
+    textarea,
+    input:before,
+    input:after {
+        width: 100%;
+    }
+}
